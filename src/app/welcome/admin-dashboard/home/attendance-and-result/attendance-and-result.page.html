@@ -1,0 +1,194 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/welcome/tabs/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Attendances & Results</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+
+    <ion-segment [(ngModel)]="segment" color="primary">
+        <ion-segment-button value="attendances" checked>Attendances</ion-segment-button>
+        <ion-segment-button value="results">Results</ion-segment-button>
+      </ion-segment>
+
+<div [ngSwitch]="segment">
+<ion-card *ngSwitchCase="'attendances'" class="card">
+      <ion-grid>
+            <ion-row>
+                <ion-col size-sm="6" offset-sm="3">
+                  <ion-item>
+                    <ion-label position="floating">Select the subject</ion-label>
+                    <ion-select name="subject">
+                      <ion-select-option value="Subject 1">Subject 1</ion-select-option>
+                      <ion-select-option value="Subject 2">Subject 2</ion-select-option>
+                      <ion-select-option value="Subject 3">Subject 3</ion-select-option>
+                    </ion-select>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col size-sm="6" offset-sm="3">
+                    <ion-item>
+                      <ion-label position="floating">Select the section</ion-label>
+                      <ion-select name="test">
+                        <ion-select-option value="Section 1">Section 1</ion-select-option>
+                        <ion-select-option value="Section 2">Section 2</ion-select-option>
+                        <ion-select-option value="Section 3">Section 3</ion-select-option>
+                      </ion-select>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size-sm="6" offset-sm="3">
+                      <ion-item>
+                        <ion-label position="floating">Select the student</ion-label>
+                        <ion-select name="student">
+                          <ion-select-option value="Student 1">Student 1</ion-select-option>
+                          <ion-select-option value="Student 2">Student 2</ion-select-option>
+                          <ion-select-option value="Student 3">Student 3</ion-select-option>
+                        </ion-select>
+                      </ion-item>
+                    </ion-col>
+                  </ion-row>
+                  <br>
+                  <br>
+                  <ion-row>
+                      <ion-col size-sm="6" offset-sm="3">
+                          <ion-button type="submit" color="primary" expand="block" (click)="presentAlert_attendance($event)">
+                            Mark Attendance
+                            <ion-icon slot="end" name="checkmark"></ion-icon>
+                          </ion-button>
+                      </ion-col>
+                    </ion-row>
+
+                    <ion-text color="primary">
+                        <h3 color="#000000">
+                            <ion-icon slot="start" name="stats"></ion-icon>
+                          Export Attendance Reports
+                          </h3>
+                      </ion-text>
+                      <br>
+              <ion-row>
+                  <ion-col size-sm="3" offset-sm="3">
+                    <ion-item>
+                      <ion-label position="floating">From</ion-label>
+                      <ion-datetime display-format="MMM DD YYYY" picker-format="YY MMM DD" name="date-from" required ></ion-datetime>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size-sm="3">
+                      <ion-item>
+                        <ion-label position="floating">To</ion-label>
+                        <ion-datetime display-format="MMM DD YYYY" picker-format="YY MMM DD" name="date-to" required></ion-datetime>
+                      </ion-item>
+                    </ion-col>
+                  </ion-row>
+                  <br>
+                  <br>
+                  <ion-row>
+                    <ion-col size-sm="6" offset-sm="3">
+                        <ion-button type="submit" color="primary" expand="block" (click)="presentToast($event)">
+                            Genarate Report
+                            <ion-icon slot="end" name="download"></ion-icon>
+                          </ion-button>
+                    </ion-col>
+                  </ion-row>
+        </ion-grid>
+        </ion-card>
+
+        <ion-card *ngSwitchCase="'results'" class="card">
+          <ion-grid>
+            <ion-row>
+                <ion-col size-sm="6" offset-sm="3">
+                  <ion-item>
+                    <ion-label position="floating">Select the subject</ion-label>
+                    <ion-select name="subject">
+                      <ion-select-option value="Subject 1">Subject 1</ion-select-option>
+                      <ion-select-option value="Subject 2">Subject 2</ion-select-option>
+                      <ion-select-option value="Subject 3">Subject 3</ion-select-option>
+                    </ion-select>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col size-sm="6" offset-sm="3">
+                    <ion-item>
+                      <ion-label position="floating">Select the test</ion-label>
+                      <ion-select name="test">
+                        <ion-select-option value="Section 1">Test 1</ion-select-option>
+                        <ion-select-option value="Section 2">Test 2</ion-select-option>
+                        <ion-select-option value="Section 3">Test 3</ion-select-option>
+                      </ion-select>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size-sm="6" offset-sm="3">
+                      <ion-item>
+                        <ion-label position="floating">Select the student</ion-label>
+                        <ion-select name="student">
+                          <ion-select-option value="Student 1">Student 1</ion-select-option>
+                          <ion-select-option value="Student 2">Student 2</ion-select-option>
+                          <ion-select-option value="Student 3">Student 3</ion-select-option>
+                        </ion-select>
+                      </ion-item>
+                    </ion-col>
+                  </ion-row>
+                  <br>
+                  <br>
+                  <ion-item>
+                      <ion-label position="floating">Enter Marks</ion-label>
+                      <ion-input type="number"></ion-input>
+                    </ion-item>
+                  <br>
+                  <br>
+                  <ion-row>
+                      <ion-col size-sm="6" offset-sm="3">
+                          <ion-button type="submit" color="primary" expand="block" (click)="presentAlert_result($event)">
+                            Mark Result
+                            <ion-icon slot="end" name="checkmark"></ion-icon>
+                          </ion-button>
+                      </ion-col>
+                    </ion-row>
+
+                    <ion-text color="primary">
+                        <h3 color="#000000">
+                            <ion-icon slot="start" name="stats"></ion-icon>
+                            Export Results Reports</h3>
+                      </ion-text>
+                      <br>
+              <ion-row>
+                  <ion-col size-sm="3" offset-sm="3">
+                    <ion-item>
+                      <ion-label position="floating">From</ion-label>
+                      <ion-datetime display-format="MMM DD YYYY" picker-format="YY MMM DD" name="date-from" required ></ion-datetime>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size-sm="3">
+                      <ion-item>
+                        <ion-label position="floating">To</ion-label>
+                        <ion-datetime display-format="MMM DD YYYY" picker-format="YY MMM DD" name="date-to" required></ion-datetime>
+                      </ion-item>
+                    </ion-col>
+                  </ion-row>
+                  <br>
+                  <br>
+                  <ion-row>
+                    <ion-col size-sm="6" offset-sm="3">
+                        <ion-button type="submit" color="primary" expand="block">
+                            Genarate Report
+                            <ion-icon slot="end" name="download"></ion-icon>
+                        </ion-button>
+                    </ion-col>
+                  </ion-row>
+        </ion-grid>
+        </ion-card>
+      </div>      
+</ion-content>
+  

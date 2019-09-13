@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/welcome/tabs/home"></ion-back-button>
+        </ion-buttons>
+    <ion-title>Add Employee</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="card">
+        <ion-card-header slot="center">
+            <ion-title>Employee Details</ion-title>
+        </ion-card-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-sm="6" offset-sm="3">
+              
+              <ion-item>
+                <ion-label position="floating">Name</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+              <br>
+
+              <ion-item>
+                  <ion-label position="floating">E-mail</ion-label>
+                  <ion-input type="email"></ion-input>
+                </ion-item>
+                <br>
+
+                <ion-item>
+                    <ion-label position="floating">Phone</ion-label>
+                    <ion-input type="text area" ></ion-input>
+                  </ion-item>
+                  <br>
+
+                  <ion-item>
+                      <ion-label position="floating">Salary</ion-label>
+                      <ion-input type="text area"></ion-input>
+                    </ion-item>
+                    <br>
+
+                <ion-item>
+                    <ion-label position="floating">Designation</ion-label>
+                    <ion-input type="text"></ion-input>
+                  </ion-item>
+                  <br>
+
+                  <ion-item>
+                      <ion-label position="floating">Description</ion-label>
+                      <ion-input type="text area" 
+                      ></ion-input>
+                  </ion-item>
+                  <br>
+
+                          <ion-item>
+                            <ion-label position="inline">Date Of Birth</ion-label>
+                            <ion-datetime display-format="MMM DD YYYY" picker-format="YY MMM DD" 
+                            ></ion-datetime>
+                          </ion-item>
+                          <br>
+
+                    <ion-item>
+                      <ion-label position="floating">Gender</ion-label>
+                      <ion-select name="test">
+                        <ion-select-option value="Section 1">Male</ion-select-option>
+                        <ion-select-option value="Section 2">Female</ion-select-option>
+                      </ion-select>
+                    </ion-item>
+   
+                <br><br>
+                <ion-row>
+                    <ion-col size-sm="6" offset-sm="3">
+                        <ion-button type="submit" color="primary" expand="block">Save Employee</ion-button>
+                    </ion-col>
+                  </ion-row>
+      </ion-col>
+    </ion-row>
+  <!-- <div text-center>
+      <ion-spinner color="primary" *ngIf="isLoading"></ion-spinner>
+  </div> -->
+  <!-- <ion-progress-bar value="0.5" buffer="0.75" *ngIf="isLoading"></ion-progress-bar> -->
+  
+</ion-grid>
+</ion-card>
+</ion-content>

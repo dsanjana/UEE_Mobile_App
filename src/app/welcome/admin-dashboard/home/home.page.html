@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <section text-center>
+    <ion-img src="../assets/img/school-managment1.png"></ion-img>
+  </section>
+  <!-- <ion-grid>
+    <ion-row>
+      <ion-col size="6" size-sm="4" offset-sm="1" text-center>
+        <ion-card text-center padding class="card">
+          <ion-img padding src="../assets/icon/User_96px.png"></ion-img>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6" size-sm="4" offset-sm="1" text-center>
+          <ion-card text-center padding class="card" [routerLink]="['/', 'welcome', 'tabs', 'home', 'employee-list']">
+            <ion-img padding src="../assets/icon/Worker_96px.png"></ion-img>
+          </ion-card>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="6" size-sm="4" offset-sm="1" text-center>
+            <ion-card text-center padding class="card" [routerLink]="['/', 'welcome', 'tabs', 'home', 'attendance-and-results']">
+              <ion-img padding src="../assets/icon/Attendance_96px.png"></ion-img>
+            </ion-card>
+          </ion-col>
+          <ion-col size="6" size-sm="4" offset-sm="1" text-center>
+              <ion-card text-center padding class="card">
+                <ion-img padding src="../assets/icon/Expensive_96px.png"></ion-img>
+              </ion-card>
+            </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col size="6" size-sm="4" offset-sm="1" text-center>
+              <ion-card text-center padding class="card" [routerLink]="['/', 'welcome', 'tabs', 'home', 'send-sms']">
+                <ion-img padding src="../assets/icon/SMS_96px.png"></ion-img>
+              </ion-card>
+            </ion-col>
+            <ion-col size="6" size-sm="4" offset-sm="1" text-center>
+                <ion-card text-center padding class="card">
+                  <ion-img padding src="../assets/icon/Align Text Left_96px.png"></ion-img>
+                </ion-card>
+              </ion-col>
+        </ion-row>
+  </ion-grid> -->
+
+  <ion-grid class="card-background-page">
+    <ion-card [routerLink]="['/', 'welcome', 'tabs', 'home', 'student-list']">
+      <img src="../assets/img/student.png"/>
+      <div class="card-title">Student Management</div>
+    </ion-card>
+  
+    <ion-card [routerLink]="['/', 'welcome', 'tabs', 'home', 'employee-list']">
+      <img src="../assets/img/workers.png"/>
+      <div class="card-title">Employee Management</div>
+    </ion-card>
+  
+    <ion-card [routerLink]="['/', 'welcome', 'tabs', 'home', 'attendance-and-results']">
+      <img src="../assets/img/attendance.png"/>
+      <div class="card-title">Attendance & Results</div>
+    </ion-card>
+  
+    <ion-card>
+      <img src="../assets/img/fee.png"/>
+      <div class="card-title">Fee</div>
+    </ion-card>
+  
+    <ion-card [routerLink]="['/', 'welcome', 'tabs', 'home', 'send-sms']">
+      <img src="../assets/img/sms_n.png"/>
+      <div class="card-title">Send SMS</div>
+      <!-- <div class="card-subtitle">28 Listings</div> -->
+    </ion-card>
+  </ion-grid>
+</ion-content>
+
