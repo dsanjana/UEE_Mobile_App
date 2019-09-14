@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, AlertController, ToastController } from '@ionic/angular';
+import { Injectable, ErrorHandler } from '@angular/core';
 
 @Component({
   selector: 'app-attendance-and-result',

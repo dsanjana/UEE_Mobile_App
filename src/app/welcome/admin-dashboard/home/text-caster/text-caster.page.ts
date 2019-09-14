@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-add-new-student',
-  templateUrl: './add-new-student.page.html',
-  styleUrls: ['./add-new-student.page.scss'],
+  selector: 'app-text-caster',
+  templateUrl: './text-caster.page.html',
+  styleUrls: ['./text-caster.page.scss'],
 })
-export class AddNewStudentPage implements OnInit {
+export class TextCasterPage implements OnInit {
 
   constructor() { }
 

@@ -68,6 +68,21 @@ const routes: Routes = [
                         loadChildren:
                           './admin-dashboard/home/student-list/add-new-student/add-new-student.module#AddNewStudentPageModule'
                     },
+                    {
+                        path: 'student-list/update-student',
+                        loadChildren:
+                          './admin-dashboard/home/student-list/update-student/update-student.module#UpdateStudentPageModule'
+                    },
+                    {
+                        path: 'fee',
+                        loadChildren:
+                          './admin-dashboard/home/fee/fee.module#FeePageModule'
+                    },
+                    {
+                        path: 'text-caster',
+                        loadChildren:
+                          './admin-dashboard/home/text-caster/text-caster.module#TextCasterPageModule'
+                    },
                 ]
             },
             {
@@ -82,6 +97,8 @@ const routes: Routes = [
         redirectTo: '/welcome/tabs/admin',
         pathMatch: 'full'
     },
+
+
 ];
 
 @NgModule({

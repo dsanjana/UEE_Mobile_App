@@ -1,0 +1,114 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/places/tabs/discover"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Add Fees</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  
+
+
+  <ion-content> 
+    <!-- <ion-card> -->
+        <ion-card class="card">
+            <ion-card-header slot="center">
+                <ion-title>Payment Details</ion-title>
+            </ion-card-header>
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+        <ion-grid>
+            
+              <ion-row>
+                  <ion-col size-sm="6" offset-sm="3">
+                    <ion-item>
+                      <ion-label position="floating">Select the class
+                          <ion-text color="danger">*</ion-text>
+                      </ion-label>
+                      <ion-select name="subject" required>
+                        <ion-select-option value="Subject 1">Grade 5</ion-select-option>
+                        <ion-select-option value="Subject 2">Grade 6</ion-select-option>
+                        <ion-select-option value="Subject 3">Grade 7</ion-select-option>
+                      </ion-select>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+                <br>
+                <ion-row>
+                    <ion-col size-sm="6" offset-sm="3">
+                      <ion-item>
+                        <ion-label position="floating">Select the stream
+                            <ion-text color="danger">*</ion-text>
+                        </ion-label>
+                        <ion-select name="test" required>
+                          <ion-select-option value="Section 1">IT</ion-select-option>
+                          <ion-select-option value="Section 2">Engineering</ion-select-option>
+                          <ion-select-option value="Section 3">Law</ion-select-option>
+                          <ion-select-option value="Section 3">Nursing</ion-select-option>
+                        </ion-select>
+                      </ion-item>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                      <ion-col size-sm="6" offset-sm="3">
+                        <ion-item>
+                          <ion-label position="floating">Select the semester
+                              <ion-text color="danger">*</ion-text>
+                          </ion-label>
+                          <ion-select name="student">
+                            <ion-select-option value="Student 1">Semester 1</ion-select-option>
+                            <ion-select-option value="Student 2">Semester 2</ion-select-option>
+                            <ion-select-option value="Student 3">Semester 3</ion-select-option>
+                          </ion-select>
+                        </ion-item>
+                      </ion-col>
+                    </ion-row>
+                    <br>
+                    <ion-row>
+                    <ion-item>
+                        <ion-label position="floating">Total Fee
+                            <ion-text color="danger">*</ion-text>
+                        </ion-label>
+                        <ion-input type="number" ngModel name="fee" required fee
+                        #emailCtrl="ngModel"></ion-input>
+                      </ion-item>
+                      <ion-item *ngIf="!emailCtrl.valid && emailCtrl.touched" lines="none">
+                          <ion-label color="danger">Feild must not be empty.</ion-label>
+                        </ion-item>
+                    </ion-row>
+                    <br>
+                <ion-row>
+                    <ion-col size-sm="3" offset-sm="3">
+                      <ion-item>
+                        <ion-label position="floating">Date
+                            <ion-text color="danger">*</ion-text>
+                        </ion-label>
+                        <ion-datetime display-format="MMM DD YYYY" picker-format="YY MMM DD" name="date-from" required ></ion-datetime>
+                      </ion-item>
+                    </ion-col>
+                  </ion-row>
+                  <br>
+                  <ion-row>
+                      <ion-item>
+                          <ion-label position="floating">Student ID
+                              <ion-text color="danger">*</ion-text>
+                          </ion-label>
+                          <ion-input type="text" ngModel name="fname" required fname
+                          #fnameCtrl="ngModel"></ion-input>
+                        </ion-item>
+                        <ion-item *ngIf="!fnameCtrl.valid && fnameCtrl.touched" lines="none">
+                            <ion-label color="danger">Field must not be empty.</ion-label>
+                          </ion-item>
+                      </ion-row>
+                    <br><br><br>
+                    <ion-row>
+                      <ion-col size-sm="6" offset-sm="3">
+                          <ion-button type="submit" color="primary" expand="block" [disabled]="!f.valid">Add</ion-button>
+                      </ion-col>
+                    </ion-row>
+                 
+          </ion-grid>
+          </form>
+        </ion-card>
+  </ion-content>

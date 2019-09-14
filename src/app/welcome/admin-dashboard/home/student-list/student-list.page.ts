@@ -1,8 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { PopoverController, AlertController, ToastController } from '@ionic/angular';
 
 import { DashboardPopoverComponent } from './dashboard-popover/dashboard-popover.component';
 import { ScardPopoverComponent } from './scard-popover/scard-popover.component';
+import { StudentService } from './student.service';
+import { Student } from './student.module';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-student-list',
@@ -10,13 +13,19 @@ import { ScardPopoverComponent } from './scard-popover/scard-popover.component';
   styleUrls: ['./student-list.page.scss'],
 })
 export class StudentListPage implements OnInit {
+  students: Student[];
+  private studentSub: Subscription;
 
   constructor(public popOverContoller: PopoverController,
               public alertController: AlertController,
-              public toastController: ToastController
+              public toastController: ToastController,
+              public studentService: StudentService
             ) { }
 
   ngOnInit() {
+    this.studentSub = this.studentService.places.subscribe(student => {
+      this.students = student;
+    });
   }
 
   async presentPopover() {
@@ -75,6 +84,7 @@ export class StudentListPage implements OnInit {
 
     await alert.present();
   }
+
 
   // navigateToAdd() {
   //   this.router.navigate(['add']);

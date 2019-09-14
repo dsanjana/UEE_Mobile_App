@@ -10,66 +10,52 @@
 
     <ion-content>
       <ion-list>
+          <ion-menu-toggle>
+              <ion-item lines="none" routerLink="/welcome/tabs/home">
+                <ion-icon name="business" slot="start"></ion-icon>
+                <ion-label>Home</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+
         <ion-menu-toggle>
-          <ion-item lines="none" routerLink="/places/tabs/discover">
+          <ion-item lines="none" routerLink="/welcome/tabs/home/student-list">
             <ion-icon name="business" slot="start"></ion-icon>
-            <ion-label>Discover Places</ion-label>
+            <ion-label>Student Management</ion-label>
           </ion-item>
         </ion-menu-toggle>
 
         <ion-menu-toggle>
-          <ion-item lines="none" routerLink="/bookings">
+          <ion-item lines="none" routerLink="/welcome/tabs/home/employee-list">
             <ion-icon name="checkbox-outline" slot="start"></ion-icon>
-            <ion-label>Your Bookings</ion-label>
+            <ion-label>Employee Management</ion-label>
           </ion-item>
         </ion-menu-toggle>
 
         <ion-menu-toggle>
-          <ion-item lines="none" routerLink="/places/tabs/offers/fee">
+          <ion-item lines="none" routerLink="/welcome/tabs/home/attendance-and-results">
             <ion-icon name="business" slot="start"></ion-icon>
-            <ion-label>Fee</ion-label>
+            <ion-label>Attendance & Results</ion-label>
           </ion-item>
         </ion-menu-toggle>
 
         <ion-menu-toggle>
-          <ion-item lines="none" routerLink="/places/tabs/offers/result">
+          <ion-item lines="none" routerLink="/welcome/tabs/home/fee">
             <ion-icon name="business" slot="start"></ion-icon>
-            <ion-label>Results</ion-label>
+            <ion-label>Fee Management</ion-label>
           </ion-item>
         </ion-menu-toggle>
 
         <ion-menu-toggle>
-          <ion-item lines="none" routerLink="/places/tabs/offers/text">
+          <ion-item lines="none" routerLink="/welcome/tabs/home/send-sms">
+            <ion-icon name="business" slot="start"></ion-icon>
+            <ion-label>Send SMS</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item lines="none" routerLink="/places/tabs/offers/homeT">
             <ion-icon name="business" slot="start"></ion-icon>
             <ion-label>Text Caster</ion-label>
-          </ion-item>
-        </ion-menu-toggle>
-
-        <ion-menu-toggle>
-          <ion-item lines="none" routerLink="/places/tabs/offers/homeT">
-            <ion-icon name="business" slot="start"></ion-icon>
-            <ion-label>Home</ion-label>
-          </ion-item>
-        </ion-menu-toggle>
-
-        <ion-menu-toggle>
-          <ion-item lines="none" routerLink="/places/tabs/offers/homeT">
-            <ion-icon name="business" slot="start"></ion-icon>
-            <ion-label>Employee</ion-label>
-          </ion-item>
-        </ion-menu-toggle>
-
-        <ion-menu-toggle>
-          <ion-item lines="none" routerLink="/places/tabs/offers/homeT">
-            <ion-icon name="business" slot="start"></ion-icon>
-            <ion-label>Student</ion-label>
-          </ion-item>
-        </ion-menu-toggle>
-
-        <ion-menu-toggle>
-          <ion-item lines="none" routerLink="/places/tabs/offers/homeT">
-            <ion-icon name="business" slot="start"></ion-icon>
-            <ion-label>Home</ion-label>
           </ion-item>
         </ion-menu-toggle>
 
